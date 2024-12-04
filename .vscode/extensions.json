@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "lokalise.i18n-ally",
+    "streetsidesoftware.code-spell-checker",
+    "stylelint.vscode-stylelint",
+    "vue.volar",
+    "vitest.explorer"
+  ],
+  "unwantedRecommendations": ["ZixuanChen.vitest-explorer", "vue.vscode-typescript-vue-plugin"]
+}
