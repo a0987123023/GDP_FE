@@ -1,0 +1,143 @@
+#app {
+  .el-input-group__append button.el-button {
+    @apply bg-primary-800 rounded-none rounded-r text-white py-0 h-full;
+    &:hover {
+      @apply bg-primary-700 text-white;
+    }
+    &.is-disabled {
+      color: var(--el-button-disabled-text-color);
+      cursor: default !important;
+      background-color: var(--el-button-disabled-bg-color);
+      background-image: none;
+      border-color: var(--el-button-disabled-border-color);
+    }
+  }
+
+  .el-form {
+    /** 搜尋框樣式 .search-input-bg */
+    .search-input-bg {
+      @apply py-4  bg-primary-500 mb-1;
+      .el-form-item:not(.margin-bottom):last-child {
+        @apply mb-0;
+      }
+    }
+
+    /** 必填樣式 .form-item-required */
+    .form-item-required {
+      .el-form-item__label::before {
+        @apply text-red-500;
+
+        content: '*';
+      }
+    }
+    .number-error > .el-input__wrapper {
+      background-color: var(--el-color-danger);
+    }
+    .number-error > .el-input__wrapper > .el-input__inner {
+      color: var(--el-color-white);
+      -webkit-text-fill-color: var((--el-color-white));
+    }
+
+    .number-focus > .el-input__wrapper > .el-input__inner {
+      color: white;
+      background-color: var(--el-color-danger);
+    }
+
+    /** 輸入框文字靠右 .input-text-right */
+    .input-text-right input {
+      @apply text-right;
+    }
+
+    /** 輸入框文字靠右 .input-text-right */
+    .input-text-left input {
+      @apply text-left;
+    }
+
+    /** 輸入框為disabled時，cursor改預設 */
+    .el-input.is-disabled {
+      cursor: default !important;
+
+      > .el-input__wrapper > .el-input__inner {
+        cursor: default !important;
+      }
+    }
+
+    /** 數字輸入框 上下按鈕隱藏 .input-spin-button-hidden */
+    .input-spin-button-hidden {
+      input[type='number'] {
+        -moz-appearance: textfield;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        margin: 0;
+        -webkit-appearance: none;
+      }
+    }
+
+    .el-form-item {
+      @apply pr-3 mb-[2px];
+      .el-form-item__content {
+        @apply min-h-[22px] leading-[22px];
+        .el-form-item__error {
+          @apply pt-[3px];
+
+          zoom: 0.9;
+        }
+      }
+      .el-form-item__label {
+        @apply text-[0.75rem] h-[22px] leading-[22px];
+      }
+
+      // 修改錯誤訊息位置
+      &.is-error .el-form-item__content {
+        padding-bottom: 14px;
+
+        .el-form-item__error {
+          top: calc(100% - 16px);
+        }
+      }
+    }
+
+    /** 日期選擇器 寬度100% .width-100 */
+    .el-date-editor.el-input {
+      &.width-100 {
+        @apply w-[100%];
+
+        .el-input__wrapper {
+          @apply w-[100%];
+        }
+      }
+      &.width-has_btn {
+        @apply w-[calc(100%-55px)];
+        .el-input__wrapper {
+          @apply w-[100%];
+        }
+      }
+    }
+
+    /** 下拉選單 寬度100% .width-100 */
+    .el-select {
+      &.width-100 {
+        @apply w-[100%];
+        .el-input__wrapper {
+          @apply w-[100%];
+        }
+      }
+      &.width-has_btn {
+        @apply w-[calc(100%-55px)];
+        .el-input__wrapper {
+          @apply w-[100%];
+        }
+      }
+      &.width-has_btn_xl {
+        @apply w-[calc(100%-100px)];
+        .el-input__wrapper {
+          @apply w-[100%];
+        }
+      }
+      .el-input.is-disabled .el-input__wrapper {
+        cursor: default !important;
+      }
+    }
+  }
+}

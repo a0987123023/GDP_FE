@@ -1,0 +1,67 @@
+/** style */
+@use './element-plus/main.scss';
+
+* {
+  @apply box-border outline-none;
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-200 my-2 rounded-md;
+  }
+
+  // 捲軸寬度
+  ::-webkit-scrollbar {
+    @apply w-2.5 absolute;
+  }
+
+  // 捲軸本體顏色
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-md;
+  }
+}
+
+html {
+  @apply grid grid-rows-[minmax(0,auto)_repeat(auto-fit,0)];
+  @apply max-w-full min-h-full;
+}
+
+body {
+  @apply grid grid-rows-[auto] row-span-1 auto-rows-max;
+  @apply overflow-x-hidden overflow-y-auto antialiased;
+
+  &.stopScrolling {
+    @apply overflow-y-hidden;
+  }
+  #app {
+    @apply row-span-1;
+    @apply max-w-full min-h-full;
+  }
+
+  .el-date-picker.has-sidebar {
+    @apply w-auto;
+  }
+  .el-picker-panel {
+    .el-picker-panel__body {
+      @apply ml-0 mb-[40px];
+    }
+    .el-picker-panel__sidebar {
+      @apply border-0 w-full flex justify-end px-[20px] py-[15px] gap-[10px];
+
+      top: unset;
+      .el-picker-panel__shortcut {
+        @apply w-auto bg-primary-600 px-5 py-1 text-xs;
+      }
+    }
+  }
+}
+
+a {
+  @apply text-inherit cursor-pointer;
+
+  -webkit-touch-callout: none; /* for iOS */
+}
+
+@media print {
+  // 隱藏 popper 避免影響列印多出一頁
+  [id^='el-popper-container'] {
+    display: none;
+  }
+}

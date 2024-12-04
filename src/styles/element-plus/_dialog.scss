@@ -1,0 +1,10 @@
+#app {
+  .el-dialog {
+    .el-dialog__header {
+      @apply mr-0 border-b;
+    }
+    .el-dialog__body {
+      @apply p-5 pt-0;
+    }
+  }
+}

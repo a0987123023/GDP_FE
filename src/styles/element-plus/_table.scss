@@ -1,0 +1,29 @@
+#app {
+  .el-table--fit {
+    .el-table__header {
+      > thead tr th {
+        @apply bg-warning-700 text-gray-600;
+      }
+    }
+  }
+  .el-table-v2__table {
+    --tw-bg-opacity: 1;
+    --tw-text-opacity: 1;
+    --el-table-header-bg-color: rgb(250 236 216 / var(--tw-bg-opacity));
+    --el-table-header-text-color: rgb(75 85 99 / var(--tw-text-opacity));
+    .el-table-v2__header {
+      background-color: var(--el-table-header-bg-color);
+    }
+  }
+
+  .el-checkbox.is-disabled {
+    cursor: default !important;
+    .el-checkbox__input {
+      cursor: default !important;
+
+      .el-checkbox__inner {
+        cursor: default !important;
+      }
+    }
+  }
+}

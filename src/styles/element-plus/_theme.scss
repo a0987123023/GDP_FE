@@ -1,0 +1,30 @@
+#app {
+  // 按鈕客製化
+  .el-button {
+    --el-button-size: 24px;
+
+    height: var(--el-button-size);
+    font-size: 12px;
+    border-radius: calc(var(--el-border-radius-base) - 1px);
+    &.custom-btn {
+      height: 25px !important;
+      padding: 10px !important;
+      font-size: 12px;
+      border: 0;
+    }
+  }
+
+  .el-button--danger,
+  .el-button--info {
+    &.custom-return {
+      border: 1px solid;
+
+      --el-button-bg-color: theme(colors.white) !important;
+    }
+    &.custom-clear {
+      border: 1px solid;
+
+      --el-button-bg-color: theme(colors.white) !important;
+    }
+  }
+}

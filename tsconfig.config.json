@@ -1,0 +1,15 @@
+{
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "playwright.config.*",
+    "configs/**/*",
+    "version.ts"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "ignoreDeprecations": "5.0",
+    "types": ["node"]
+  }
+}

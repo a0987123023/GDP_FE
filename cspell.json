@@ -1,0 +1,63 @@
+{
+  "ignorePaths": [
+    "*.svg",
+    ".gitignore",
+    "package.json", // Ignore package.json
+    "pnpm-lock.yaml",
+    "node_modules", // this will ignore anything the node_modules directory
+    "**/node_modules", // the same for this one
+    "**/node_modules/**", // the same for this one
+    "node_modules/**", // Doesn't currently work due to how the current working directory is determined.
+    "vscode-extension", //
+    ".git", // Ignore all .dll files
+    "dist/",
+    "auto-imports.d.ts",
+    "components.d.ts",
+    "configs/",
+    ".eslintrc.cjs",
+    ".cz.yaml",
+    ".commitlintrc.cjs",
+    ".stylelintrc.json",
+    "cspell.json",
+    "postcss.config.cjs",
+    "tailwind.config.cjs",
+    "vite.config.ts",
+    "src/assets/styles/normalize.css",
+    "src/plugins"
+  ],
+  "words": [
+    "BRIP",
+    "BRIR",
+    "btns",
+    "callout",
+    "camelcase",
+    "cdib",
+    "CNAPS",
+    "commitlint",
+    "commitlintrc",
+    "composables",
+    "Corresp",
+    "Cust",
+    "Datas",
+    "endregion",
+    "evalu",
+    "fnapi",
+    "huskyrc",
+    "HZWG",
+    "IDCD",
+    "IFRS",
+    "ISIN",
+    "iSINCODE",
+    "Listed",
+    "origonTxNo",
+    "pinia",
+    "Relcd",
+    "reportpModel",
+    "tailwindcss",
+    "typeof",
+    "vueuse",
+    "YYYYM",
+    "mgmt",
+    "PeMgmt"
+  ]
+}
