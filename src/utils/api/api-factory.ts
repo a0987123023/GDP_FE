@@ -9,7 +9,7 @@ type ApiPrefixPath = '/api' | '/fnapi'
 
 export class ApiFactory {
   /** 預設API */
-  private _apiPrefixPath = '/api'
+  private _apiPrefixPath = '/'
 
   /**
    * Creates an instance of ApiFactory.

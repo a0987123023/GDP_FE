@@ -2,7 +2,7 @@ export default {
   name: 'zh-tw',
   el: {
     messagebox: {
-      title: 'Message'
+      title: '訊息'
     }
   }
 }

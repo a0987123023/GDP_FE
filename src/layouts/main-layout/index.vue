@@ -1,26 +1,15 @@
 <script setup lang="ts">
-// import { ElLoading } from 'element-plus'
-// import type { LoadingInstance } from 'element-plus/es/components/loading/src/loading'
-// import { storeToRefs } from 'pinia'
-// import pinia from '@/stores/create-pinia'
-// import { useLoadingStore } from '@/stores/loading'
+import { loadingService } from '@/services'
 import TheHeader from './components/the-header.vue'
 import TheMenu from './components/the-menu.vue'
 defineOptions({
   name: 'main-layout'
 })
-// const loadingStore = useLoadingStore(pinia)
-// const { isLoading } = storeToRefs(loadingStore)
-// const loading: LoadingInstance = ElLoading.service({
-//   lock: true,
-//   text: 'loading',
-//   background: 'rgba(255, 255, 255, .5)',
-//   target: 'app'
-// })
-// onMounted(() => {
-//   isLoading.value = true
-//   console.log('🚀 ~ loading:', loading)
-// })
+
+const apiExample = async () => {
+  const res = await loadingService.test()
+  console.log('🚀 ~ apiExample ~ res:', res)
+}
 </script>
 
 <template>
@@ -29,7 +18,7 @@ defineOptions({
       <the-header :columns="[]" :data="{}" />
       <the-menu />
     </div>
-
+    <button @click="apiExample">api</button>
     <div :class="['content']">
       <div class="breadcrumb"></div>
       <div class="main">

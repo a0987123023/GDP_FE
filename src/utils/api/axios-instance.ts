@@ -48,7 +48,7 @@ const addLoading = ({
   if (loadingCount === 0 && !loading) {
     loading = ElLoading.service({
       lock: true,
-      text: target ? loadingText : undefined,
+      text: target ? loadingText : 'loading...',
       background: target
         ? 'rgba(255, 255, 255, 0.6)'
         : 'rgba(255, 255, 255, 0)',
@@ -59,7 +59,9 @@ const addLoading = ({
     if (!target) {
       /** 沒有指定目標(body)的話，覆蓋 element 自動計算 zIndex 值，使 loading 永遠在最上層 */
       loading.$el.style.zIndex = TOP_Z_INDEX
-      loading.$el.style.visibility = 'hidden'
+      // loading.$el.style.visibility = 'hidden'
+      loading.$el.style.color = 'red'
+      loading.$el.style.stroke = 'red'
     }
   }
   loadingCount++
